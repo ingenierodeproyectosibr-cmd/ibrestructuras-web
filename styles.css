@@ -1,0 +1,555 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+:root{--black:#17142f;--dark:#211b46;--dark2:#30285e;--brand:#4c46a8;--brand2:#6b70d8;--orange:#f47b20;--text:#1c2022;--muted:#697177;--line:#dfe2e3;--soft:#f4f5f5;--white:#fff;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.65;background:#fff}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}.container{width:min(calc(100% - 48px),var(--max));margin:auto}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.08);box-shadow:0 6px 24px rgba(0,0,0,.05)}.nav-wrap{height:84px;display:flex;align-items:center;gap:28px}.brand img{width:165px;max-height:58px;object-fit:contain}.nav-wrap nav{display:flex;align-items:center;gap:25px;margin-left:auto}.nav-wrap nav a{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:30px 0;position:relative}.nav-wrap nav a:after{content:"";position:absolute;left:0;bottom:23px;width:0;height:2px;background:var(--orange);transition:.25s}.nav-wrap nav a:hover:after{width:100%}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:0 23px;border:1px solid transparent;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;transition:.25s}.btn span{font-size:18px}.btn-orange{background:var(--orange);color:#fff}.btn-orange:hover{background:#d96816;transform:translateY(-2px)}.top-btn{margin-left:4px}.menu{display:none;border:0;background:none;font-size:28px;cursor:pointer}
+.hero{min-height:calc(100vh - 84px);position:relative;overflow:hidden;display:flex;align-items:center;background:#111;color:#fff}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,17,48,.92),rgba(36,31,76,.68) 48%,rgba(52,65,125,.25));z-index:1}.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,8,22,.16),rgba(9,8,22,.08) 55%,rgba(9,8,22,.34));z-index:1;pointer-events:none}.hero-content{position:relative;z-index:2;padding:105px 0 85px;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:end}.hero h1{font:700 clamp(55px,6.8vw,96px)/.92 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:-.02em;margin:0;max-width:900px}.hero h1 span,h2 span{color:var(--orange)}.hero-copy{font-size:17px;color:#d8dcde;max-width:690px;margin:28px 0}.eyebrow{font-size:10px;letter-spacing:.18em;font-weight:800;color:#747c81;margin:0 0 18px}.eyebrow.orange{color:var(--orange)}.hero .eyebrow{color:#d0d4d5}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.hero-proof{border-left:1px solid rgba(255,255,255,.22);padding-left:40px}.hero-proof b,.hero-proof strong{font:700 82px/1 "Barlow Condensed";color:var(--orange)}.hero-proof small,.hero-proof span{display:block;color:#c6cbcd;font-size:11px;text-transform:uppercase;letter-spacing:.12em}.stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.2);margin-top:25px}.stats div{padding:17px 15px 12px 0;border-bottom:1px solid rgba(255,255,255,.2)}.stats div:nth-child(odd){border-right:1px solid rgba(255,255,255,.2)}.stats b{font:600 28px "Barlow Condensed";display:block;margin-bottom:5px}.section{padding:110px 0}.section-head{display:grid;grid-template-columns:1fr 430px;gap:60px;align-items:end;margin-bottom:48px}.section-head>p{margin:0;color:var(--muted);font-size:14px}.section-head h2,.dark-section h2,.trajectory h2,.sustainability h2{font:700 clamp(42px,4.6vw,68px)/.96 "Barlow Condensed";text-transform:uppercase;margin:0}
+.dark-section{background:linear-gradient(135deg,#201b45 0%,#30285e 55%,#3f4b92 100%);color:#fff}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}.dark-section p,.sustainability p{color:#aeb5b8}.highlight{border-left:1px solid #3a3e40;padding:25px 0 25px 45px}.highlight strong{display:block;font:700 110px/1 "Barlow Condensed";color:var(--orange)}.highlight span{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:12px}.highlight small{display:block;color:#8d9599;margin-top:12px}.services{background:var(--soft)}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d6d9da;border:1px solid #d6d9da}.service-grid>div{background:#fff;min-height:235px;padding:29px;position:relative;transition:.25s}.service-grid>div:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(0,0,0,.08);z-index:2}.service-grid b{position:absolute;right:22px;top:20px;font:600 15px "Barlow Condensed";color:#a6adb0}.service-grid h3{font:600 30px/1 "Barlow Condensed";text-transform:uppercase;margin:45px 0 12px}.service-grid p{font-size:12px;color:#6d757a;margin:0}.trajectory{background:linear-gradient(135deg,#211b46 0%,#3b4388 100%);color:#fff;padding:105px 0}.trajectory-line{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #383d40;margin-top:55px}.trajectory-line>div{padding:30px 25px 0;border-left:1px solid #383d40}.trajectory-line>div:first-child{border-left:0;padding-left:0}.trajectory-line strong{font:700 62px "Barlow Condensed";color:var(--orange);display:block}.trajectory-line small{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#aab1b4}.projects{background:#fff}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}.filter{background:#fff;border:1px solid #d8dbdc;padding:10px 15px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;cursor:pointer}.filter.active,.filter:hover{background:#0d0f10;color:#fff;border-color:#0d0f10}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#fff;border:1px solid #e1e3e4;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 16px 30px rgba(0,0,0,.08)}.card img{width:100%;height:260px;object-fit:cover}.card-body{padding:23px}.card-body>span{font-size:9px;color:var(--orange);font-weight:800;letter-spacing:.16em}.card-body h3{font:600 27px/1 "Barlow Condensed";text-transform:uppercase;margin:8px 0}.card-body p{font-size:12px;color:#70787d;margin:0 0 13px}.card-body a{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.card-body i{color:var(--orange);font-style:normal}.card.hidden{display:none}.process{background:var(--soft)}.process-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #d8dcdd}.process-grid>div{padding:28px 28px 28px 0;border-bottom:1px solid #d8dcdd;border-right:1px solid #d8dcdd}.process-grid>div:nth-child(3n){padding-left:28px;border-right:0}.process-grid>div:nth-child(3n+2){padding-left:28px}.process-grid b{font:600 28px "Barlow Condensed";color:var(--orange)}.process-grid h3{font:600 27px/1 "Barlow Condensed";text-transform:uppercase;margin:8px 0}.process-grid p{font-size:12px;color:#6d757a;margin:0}.sustainability{background:#fff}.sustain-card{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#d8dbdc}.sustain-card b{background:#f3f4f4;padding:35px 25px;font:600 29px "Barlow Condensed";text-transform:uppercase}.cta{background:linear-gradient(135deg,#201b45 0%,#30285e 55%,#3f4b92 100%);color:#fff}.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:50px;padding:80px 0}.cta p{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#aeb5b8;margin:0 0 10px}.cta h2{font:700 clamp(45px,5vw,70px)/.95 "Barlow Condensed";text-transform:uppercase;margin:0}.footer{background:#17142f;color:#aeb4c4}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:45px;padding:60px 0}.footer-logo{width:145px;max-height:55px;object-fit:contain;object-position:left;margin-bottom:16px}.footer h4{font:700 13px "Barlow Condensed";color:#fff;letter-spacing:.1em;margin:0 0 15px}.footer a,.footer p{font-size:11px}.footer-grid>div:not(:first-child) a{display:block;margin:8px 0}.copyright{border-top:1px solid #222628;padding:16px 0;font-size:9px;text-transform:uppercase;letter-spacing:.08em}.copyright .container{display:flex;justify-content:space-between}.footer a:hover{color:var(--orange)}
+@media(max-width:1050px){.nav-wrap nav{gap:14px}.nav-wrap nav a{font-size:10px}.top-btn{display:none}.hero-content{grid-template-columns:1fr}.hero-proof{border-left:0;padding-left:0;max-width:500px}.service-grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.container{width:min(calc(100% - 30px),var(--max))}.nav-wrap{height:72px}.brand img{width:135px}.menu{display:block;margin-left:auto}.nav-wrap nav{display:none;position:absolute;left:0;right:0;top:72px;background:#fff;padding:8px 20px 18px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid #ddd;box-shadow:0 14px 28px rgba(0,0,0,.08)}.nav-wrap nav.open{display:flex}.nav-wrap nav a{padding:13px 0;border-bottom:1px solid #eee}.nav-wrap nav a:after{display:none}.hero{min-height:calc(100vh - 72px)}.hero-content{padding:80px 0 70px;gap:45px}.hero h1{font-size:52px}.hero-copy{font-size:15px}.section{padding:75px 0}.section-head,.two-col{grid-template-columns:1fr;gap:25px}.section-head{margin-bottom:32px}.service-grid,.gallery{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr}.process-grid>div,.process-grid>div:nth-child(3n),.process-grid>div:nth-child(3n+2){padding:24px 0;border-right:0}.trajectory-line{grid-template-columns:1fr;gap:0}.trajectory-line>div,.trajectory-line>div:first-child{border-left:0;border-bottom:1px solid #383d40;padding:24px 0}.trajectory-line>div:last-child{border-bottom:0}.cta-inner{display:block;padding:65px 0}.cta .btn{margin-top:22px}.footer-grid{grid-template-columns:1fr 1fr;gap:35px}.copyright .container{display:block}.copyright span{display:block;margin:4px 0}}
+@media(max-width:480px){.hero h1{font-size:45px}.gallery .card img{height:230px}.highlight strong{font-size:82px}.footer-grid{grid-template-columns:1fr}}
+
+/* IBR brand-inspired visual refinement */
+.brand-strip{background:linear-gradient(90deg,#211b46,#3e4b95)}
+.dark-section,.trajectory,.cta{background:linear-gradient(135deg,#211b46 0%,#30285e 52%,#4556a3 100%)}
+.service-grid>div:hover{box-shadow:0 18px 35px rgba(54,52,125,.16)}
+.card:hover{box-shadow:0 16px 30px rgba(54,52,125,.13)}
+
+/* ===== IBR FINAL BRAND BACKGROUND ===== */
+body{
+  background:#211b46;
+}
+.site-header{
+  background:rgba(24,20,57,.97);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.nav-wrap nav a{color:#fff}
+.nav-wrap nav a:after{background:#f47b20}
+.brand img{filter:none}
+.section,
+.projects,
+.sustainability{
+  background:linear-gradient(135deg,#211b46 0%,#28225a 48%,#39488f 100%);
+  color:#fff;
+}
+.section-head>p,
+.dark-section p,
+.sustainability p{
+  color:#c2c7d4;
+}
+.eyebrow{color:#aeb5d1}
+.service-grid{
+  background:rgba(255,255,255,.12);
+  border-color:rgba(255,255,255,.12);
+}
+.service-grid>div{
+  background:rgba(255,255,255,.045);
+  border-color:rgba(255,255,255,.08);
+  color:#fff;
+}
+.service-grid p{color:#c0c5d0}
+.service-grid b{color:#aeb5d1}
+.trajectory-line{border-color:rgba(255,255,255,.16)}
+.trajectory-line>div{border-color:rgba(255,255,255,.16)}
+.process-grid{border-color:rgba(255,255,255,.16)}
+.process-grid>div{border-color:rgba(255,255,255,.16)}
+.process-grid p{color:#c0c5d0}
+.process{
+  background:linear-gradient(135deg,#272052,#35437f);
+  color:#fff;
+}
+.filters .filter{
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  border-color:rgba(255,255,255,.2);
+}
+.filters .filter.active,.filters .filter:hover{
+  background:#f47b20;color:#fff;border-color:#f47b20;
+}
+.gallery{
+  gap:16px;
+}
+.card{
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.12);
+  color:#fff;
+}
+.card-body{
+  background:rgba(255,255,255,.025);
+}
+.card-body h3{
+  color:#fff;
+}
+.card-body p{
+  color:#c2c7d4;
+}
+.card:hover{
+  box-shadow:0 18px 38px rgba(5,4,25,.35);
+}
+.two-col .highlight{
+  border-color:rgba(255,255,255,.18);
+}
+.cta{
+  background:linear-gradient(135deg,#171333 0%,#2c255d 55%,#4a5aa8 100%);
+}
+.footer{
+  background:#11102a;
+}
+.footer a,.footer p{color:#aeb5c4}
+.footer h4{color:#fff}
+
+/* Project photos remain clean: no white text over the image itself. */
+.card img{
+  position:relative;
+}
+.clean-overlay{
+  display:none !important;
+}
+
+/* Remove visual white blocks from generic links/cards. */
+.projects .card-body a{
+  display:none;
+}
+
+
+/* ===== IBR CLEAN WHITE CORPORATE THEME ===== */
+body{background:#fff;color:#1c2022}
+.site-header{background:rgba(255,255,255,.98);border-bottom:1px solid #e5e7e8;box-shadow:0 6px 24px rgba(20,25,30,.06)}
+.nav-wrap nav a{color:#17142f}
+.section,.projects,.services,.process,.sustainability{background:#fff;color:#1c2022}
+.section-head>p,.services p,.process-grid p,.card-body p,.sustainability p{color:#697177}
+.service-grid{background:#dfe2e3;border-color:#dfe2e3}
+.service-grid>div{background:#fff;color:#1c2022;border-color:#dfe2e3}
+.service-grid p{color:#697177}
+.service-grid b{color:#8a9196}
+.process-grid{border-color:#dfe2e3}
+.process-grid>div{border-color:#dfe2e3}
+.trajectory{background:#fff;color:#1c2022}
+.trajectory-line{border-color:#dfe2e3}
+.trajectory-line>div{border-color:#dfe2e3}
+.trajectory-line small{color:#697177}
+.projects .filter{background:#fff;color:#1c2022;border-color:#d8dbdc}
+.projects .filter.active,.projects .filter:hover{background:#f47b20;color:#fff;border-color:#f47b20}
+.card{background:#fff;color:#1c2022;border-color:#e1e3e4}
+.card-body{background:#fff}
+.card-body h3{color:#1c2022}
+.card-body p{color:#697177}
+.sustain-card{background:#dfe2e3}
+.sustain-card b{background:#fff;color:#1c2022}
+.cta{background:#fff;color:#1c2022;border-top:1px solid #e5e7e8;border-bottom:1px solid #e5e7e8}
+.cta p{color:#697177}
+.footer{background:#fff;color:#697177;border-top:1px solid #e5e7e8}
+.footer h4{color:#17142f}
+.footer a,.footer p{color:#697177}
+.copyright{border-top:1px solid #e5e7e8;color:#697177}
+.dark-section{background:#fff;color:#1c2022}
+.dark-section p{color:#697177}
+.highlight{border-color:#dfe2e3}
+.highlight small{color:#697177}
+/* Keep the hero video as the only full-bleed visual background. */
+.hero{background:#111}
+.hero-video{object-fit:cover;object-position:center center}
+
+/* ===== HERO GRIS INDUSTRIAL + PANEL DE ESTADÍSTICAS ===== */
+.hero{
+  background:#596067;
+}
+.hero-video{
+  filter:grayscale(18%) brightness(.72) contrast(1.08);
+}
+.hero:before{
+  background:linear-gradient(90deg,rgba(55,61,67,.90) 0%,rgba(73,80,87,.76) 48%,rgba(92,100,108,.58) 100%);
+}
+.hero-overlay{
+  background:linear-gradient(180deg,rgba(42,47,52,.20),rgba(70,76,82,.12) 55%,rgba(35,39,43,.34));
+}
+.hero-proof{
+  border-left:0;
+  padding:0;
+}
+.stats{
+  margin-top:0;
+  padding:22px 24px;
+  background:rgba(62,68,74,.94);
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:14px;
+  box-shadow:0 18px 45px rgba(0,0,0,.28);
+  backdrop-filter:blur(7px);
+}
+.stats div{
+  padding:20px 18px;
+  border-bottom:1px solid rgba(255,255,255,.22);
+}
+.stats div:nth-child(odd){border-right:1px solid rgba(255,255,255,.22)}
+.stats div:nth-child(3),.stats div:nth-child(4){border-bottom:0}
+.stats b{font-size:32px;color:#fff}
+.stats span{color:#e4e7e9;font-size:13px;text-transform:none;letter-spacing:0}
+@media(max-width:760px){
+  .stats{padding:14px 16px;border-radius:12px}
+  .stats div{padding:16px 14px}
+}
+
+/* ===== PORTAFOLIO IBR — 8 PROYECTOS ===== */
+.completed-projects{grid-template-columns:repeat(4,1fr);gap:16px}
+.completed-projects .card img{height:245px;object-fit:cover;object-position:center}
+.completed-projects .card-body{min-height:205px;display:flex;flex-direction:column}
+.completed-projects .card-body h3{font-size:25px}
+.completed-projects .card-body p{line-height:1.55}
+.project-location{display:block;margin-top:auto;padding-top:10px;color:#7b8388;font-size:10px;font-weight:700;letter-spacing:.04em}
+@media(max-width:1200px){.completed-projects{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.completed-projects{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+  .completed-projects{grid-template-columns:1fr}
+  .completed-projects .card img{height:260px}
+  .completed-projects .card-body{min-height:0}
+}
+
+/* ===== SERVICIOS — FOTOGRAFÍA DE OBRA ===== */
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  background:transparent;
+  border:0;
+}
+.service-card{
+  background:#fff;
+  border:1px solid #dfe2e3;
+  overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.service-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 38px rgba(20,25,30,.10);
+  border-color:#cbd0d2;
+}
+.service-image{height:220px;overflow:hidden;background:#eef0f1}
+.service-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.service-card:hover .service-image img{transform:scale(1.035)}
+.service-card-body{position:relative;padding:23px 23px 25px;min-height:180px}
+.service-card-body>b{position:absolute;right:20px;top:19px;font:600 15px "Barlow Condensed";color:#8a9196}
+.service-tag{display:block;color:var(--orange);font-size:9px;font-weight:800;letter-spacing:.16em;margin-bottom:8px}
+.service-card h3{font:600 27px/1.02 "Barlow Condensed";text-transform:uppercase;margin:0 40px 12px 0;color:#1c2022}
+.service-card p{font-size:12px;line-height:1.6;color:#697177;margin:0}
+@media(max-width:1050px){.service-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.service-grid{grid-template-columns:1fr}.service-image{height:245px}.service-card-body{min-height:0}}
+
+/* Balance visual para 5 servicios en escritorio */
+@media(min-width:1051px){
+  .service-grid{grid-template-columns:repeat(6,1fr)}
+  .service-card{grid-column:span 2}
+  .service-card:nth-child(4){grid-column:2 / span 2}
+  .service-card:nth-child(5){grid-column:4 / span 2}
+}
+@media(max-width:1050px){.service-card{grid-column:auto}}
+
+/* ===== SERVICIOS: 3 ESPECIALIDADES ===== */
+.service-grid--three{grid-template-columns:repeat(3,1fr)}
+.service-grid--three .service-card{min-width:0}
+.image-brand{position:absolute;right:14px;top:14px;z-index:3;display:flex;align-items:center;justify-content:center;width:82px;height:36px;padding:5px 8px;background:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.7);box-shadow:0 8px 20px rgba(0,0,0,.12);backdrop-filter:blur(4px)}
+.image-brand img{width:100%;height:100%;object-fit:contain!important;filter:none!important}
+.service-image,.process-image,.sustain-image{position:relative}
+.service-card .service-image img,.process-image>img,.sustain-image>img{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease}
+.service-card:hover .service-image>img,.process-card:hover .process-image>img,.sustain-item:hover .sustain-image>img{transform:scale(1.055);filter:saturate(1.05) contrast(1.03)}
+
+/* ===== CÓMO TRABAJAMOS: FOTOS DINÁMICAS ===== */
+.process-grid--images{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border:0}
+.process-card{background:#fff;border:1px solid #dfe2e3;overflow:hidden;opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease}
+.process-card.visible{opacity:1;transform:translateY(0)}
+.process-card:nth-child(2){transition-delay:.08s}.process-card:nth-child(3){transition-delay:.16s}.process-card:nth-child(4){transition-delay:.24s}.process-card:nth-child(5){transition-delay:.32s}
+.process-card:hover{box-shadow:0 18px 38px rgba(20,25,30,.10);transform:translateY(-6px)}
+.process-image{height:205px;overflow:hidden;background:#eef0f1}
+.process-image>img{width:100%;height:100%;object-fit:cover;display:block}
+.process-body{position:relative;padding:20px 22px 24px;min-height:150px}
+.process-body>b{font:600 18px "Barlow Condensed";color:var(--orange)}
+.process-body h3{font:600 26px/1 "Barlow Condensed";text-transform:uppercase;margin:6px 0 10px}
+.process-body p{font-size:12px;line-height:1.6;color:#697177;margin:0}
+
+/* ===== SOSTENIBILIDAD CON IMÁGENES ===== */
+.sustain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sustain-item{background:#fff;border:1px solid #dfe2e3;overflow:hidden;opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease,box-shadow .3s ease}
+.sustain-item.visible{opacity:1;transform:translateY(0)}
+.sustain-item:nth-child(2){transition-delay:.08s}.sustain-item:nth-child(3){transition-delay:.16s}.sustain-item:nth-child(4){transition-delay:.24s}
+.sustain-item:hover{box-shadow:0 18px 38px rgba(20,25,30,.09);transform:translateY(-5px)}
+.sustain-image{height:210px;overflow:hidden;background:#eef0f1}
+.sustain-image>img{width:100%;height:100%;object-fit:cover;display:block}
+.sustain-item>div:last-child{padding:20px 22px 24px}
+.sustain-item b{font:600 17px "Barlow Condensed";color:var(--orange)}
+.sustain-item h3{font:600 26px/1 "Barlow Condensed";text-transform:uppercase;margin:6px 0 10px}
+.sustain-item p{font-size:12px;line-height:1.6;color:#697177;margin:0}
+
+/* Animación continua y sutil de las fotografías */
+@keyframes photoDrift{0%,100%{transform:scale(1.01) translate3d(0,0,0)}50%{transform:scale(1.035) translate3d(-4px,-2px,0)}}
+.process-card.visible .process-image>img,.sustain-item.visible .sustain-image>img{animation:photoDrift 7s ease-in-out infinite}
+
+/* ===== FORMULARIO COTIZA TU PROYECTO ===== */
+.cta{background:#fff;color:#1c2022;border-top:1px solid #e5e7e8;border-bottom:1px solid #e5e7e8}
+.cta-form-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start;padding:90px 0}
+.cta-copy{padding-top:15px}
+.cta-copy p{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#697177;margin:0 0 12px}
+.cta-copy h2{font:700 clamp(45px,5vw,70px)/.95 "Barlow Condensed";text-transform:uppercase;margin:0}
+.cta-copy h2 span{color:var(--orange)}
+.cta-line{width:70px;height:3px;background:var(--orange);margin:25px 0}
+.cta-copy .cta-note{font-size:13px;line-height:1.7;text-transform:none;letter-spacing:0;max-width:440px}
+.quote-form{background:#f5f6f6;border:1px solid #dfe2e3;padding:30px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.quote-form label{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#30363a;margin-bottom:16px}
+.quote-form input,.quote-form textarea{display:block;width:100%;margin-top:7px;padding:13px 14px;border:1px solid #cfd4d6;background:#fff;color:#1c2022;font:500 13px Inter,Arial,sans-serif;outline:none;transition:border-color .2s,box-shadow .2s}
+.quote-form input{height:48px}
+.quote-form textarea{resize:vertical;min-height:145px;line-height:1.55}
+.quote-form input:focus,.quote-form textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(244,123,32,.10)}
+.quote-submit{width:100%;border:0;cursor:pointer;margin-top:2px}
+.quote-form small{display:block;color:#7a8287;font-size:10px;line-height:1.5;margin-top:12px}
+
+/* ===== WHATSAPP ===== */
+.whatsapp-footer{display:inline-flex!important;align-items:center;gap:9px;margin-top:15px!important;font-weight:800!important;color:#1c2022!important}
+.whatsapp-icon{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#25D366;box-shadow:0 6px 15px rgba(37,211,102,.25)}
+.whatsapp-icon svg{width:19px;height:19px;fill:#fff}
+.whatsapp-footer:hover .whatsapp-icon{transform:translateY(-2px);box-shadow:0 9px 18px rgba(37,211,102,.3)}
+
+@media(max-width:1050px){
+  .service-grid--three{grid-template-columns:1fr 1fr}
+  .process-grid--images{grid-template-columns:1fr 1fr}
+  .sustain-grid{grid-template-columns:1fr 1fr}
+  .cta-form-wrap{grid-template-columns:1fr;gap:35px}
+}
+@media(max-width:760px){
+  .service-grid--three,.process-grid--images,.sustain-grid{grid-template-columns:1fr}
+  .process-image{height:240px}
+  .sustain-image{height:245px}
+  .form-row{grid-template-columns:1fr;gap:0}
+  .quote-form{padding:22px 18px}
+  .cta-form-wrap{padding:70px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .process-card,.sustain-item{opacity:1;transform:none;transition:none}
+  .process-card.visible .process-image>img,.sustain-item.visible .sustain-image>img{animation:none}
+}
+
+/* ===== AJUSTES SOLICITADOS: FLUJO, IMÁGENES Y WHATSAPP ===== */
+.service-grid--four{grid-template-columns:repeat(4,1fr)}
+.service-card{background:rgba(255,255,255,.045);min-width:0;transition:.25s}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(54,52,125,.18)}
+.service-image,.process-image,.sustain-image{position:relative;overflow:hidden;background:#111}
+.service-image{height:220px}
+.service-image>img,.process-image>img,.sustain-image>img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.service-card:hover .service-image>img,.process-card:hover .process-image>img,.sustain-item:hover .sustain-image>img{transform:scale(1.04)}
+.image-brand{position:absolute;right:12px;bottom:12px;width:64px;height:36px;padding:5px 7px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.image-brand img{width:100%;height:100%;object-fit:contain}
+.service-card-body{padding:22px 24px 26px}
+.service-card-body>b{font:600 28px "Barlow Condensed";color:var(--orange)}
+.service-tag{display:block;font-size:9px;font-weight:800;letter-spacing:.16em;color:var(--orange);margin-top:5px}
+.service-card-body h3{font:600 27px/1 "Barlow Condensed";text-transform:uppercase;margin:9px 0 12px}
+.service-card-body p{font-size:12px;color:#c0c5d0;margin:0}
+.process-grid--images{grid-template-columns:repeat(3,1fr);gap:16px;border-top:0}
+.process-grid--images>article{padding:0;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.045);overflow:hidden}
+.process-image{height:210px}
+.process-body{padding:20px 22px 24px}
+.process-body b{font:600 28px "Barlow Condensed";color:var(--orange)}
+.process-body h3{font:600 27px/1 "Barlow Condensed";text-transform:uppercase;margin:8px 0}
+.process-body p{font-size:12px;color:#c0c5d0;margin:0}
+.sustain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.sustain-item{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);overflow:hidden}
+.sustain-image{height:250px}
+.sustain-item>div:last-child{padding:22px 25px 26px}
+.sustain-item b{font:600 28px "Barlow Condensed";color:var(--orange)}
+.sustain-item h3{font:600 29px/1 "Barlow Condensed";text-transform:uppercase;margin:7px 0}
+.sustain-item p{font-size:12px;color:#c0c5d0;margin:0}
+.whatsapp-float{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:150;width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25d366;color:#fff;box-shadow:0 8px 25px rgba(0,0,0,.28);border:3px solid #fff;transition:transform .2s ease,box-shadow .2s ease}
+.whatsapp-float:hover{transform:translateY(-50%) scale(1.08);box-shadow:0 12px 30px rgba(0,0,0,.34)}
+.whatsapp-float svg{width:38px;height:38px;fill:currentColor}
+@media(max-width:1050px){.service-grid--four{grid-template-columns:1fr 1fr}.process-grid--images{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.service-grid--four,.process-grid--images,.sustain-grid{grid-template-columns:1fr}.service-image{height:230px}.process-image{height:220px}.sustain-image{height:230px}.whatsapp-float{right:14px;width:62px;height:62px}.whatsapp-float svg{width:35px;height:35px}}
+
+/* ====== Mejoras visuales 2026 ====== */
+.hero-company small{max-width:130px}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+.about-video-wrap{position:relative;min-height:310px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#101214}
+.about-video{width:100%;height:310px;display:block;object-fit:cover}
+.video-brand{position:absolute;left:18px;bottom:18px;background:rgba(255,255,255,.94);padding:8px 12px;border-radius:6px}.video-brand img{height:34px;width:auto;display:block}
+.project-slider,.service-slider{position:relative;display:flex;align-items:center;gap:14px}
+.project-slider .completed-projects,.service-track{width:100%;overflow:hidden;display:grid;grid-template-columns:1fr!important}
+.project-slider .card{display:none}.project-slider .card.active{display:block}
+.project-slider .card img{height:470px;object-fit:cover}
+.project-slider .card-body{min-height:190px}
+.project-arrow,.service-arrow{flex:0 0 52px;width:52px;height:52px;border-radius:50%;border:1px solid #d6dadd;background:#fff;color:#1c2022;font-size:38px;line-height:1;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.08);z-index:2}
+.project-arrow:hover,.service-arrow:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
+.service-track .service-card{display:none}.service-track .service-card.active{display:block}
+.service-track .service-card{width:100%;animation:serviceIn .45s ease}.service-track .service-image{height:360px}
+@keyframes serviceIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+
+.sustain-cards{margin-bottom:30px}.sustain-stats{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;margin-top:24px}.chart-card,.donut-card{border:1px solid #dfe2e3;background:#fff;padding:24px}.chart-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.chart-title strong{font:600 24px/1 "Barlow Condensed";text-transform:uppercase}.chart-title span{font-size:11px;color:#7a8388}.bar-chart{display:grid;gap:18px}.bar-chart>div{display:grid;grid-template-columns:145px 1fr 48px;align-items:center;gap:12px;font-size:12px}.bar-chart i{height:12px;background:#e6e8e9;position:relative;display:block;overflow:hidden}.bar-chart i:after{content:"";position:absolute;inset:0 auto 0 0;width:var(--v);background:var(--orange)}.bar-chart b{font-size:13px}.chart-note{display:block;margin-top:20px;color:#7a8388;font-size:10px;line-height:1.5}.donut-card{display:flex;align-items:center;gap:24px}.donut{width:145px;height:145px;border-radius:50%;background:conic-gradient(var(--orange) var(--p),#e6e8e9 0);display:grid;place-items:center;position:relative;flex:none}.donut:after{content:"";position:absolute;width:105px;height:105px;border-radius:50%;background:#fff}.donut span{position:relative;z-index:1;font:700 27px "Barlow Condensed"}.donut-card strong{font:600 23px "Barlow Condensed";text-transform:uppercase}.donut-card p{font-size:12px;line-height:1.6;color:#697177}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}.sustain-stats{grid-template-columns:1fr}.project-slider .card img{height:360px}}
+@media(max-width:760px){.project-arrow,.service-arrow{flex-basis:42px;width:42px;height:42px;font-size:30px}.project-slider{gap:8px}.project-slider .card img{height:280px}.service-track .service-image{height:250px}.bar-chart>div{grid-template-columns:100px 1fr 42px}.donut-card{flex-direction:column;text-align:center}.about-video,.about-video-wrap{height:240px;min-height:240px}}
+
+/* ===== AJUSTE FINAL: SERVICIOS CON EL MISMO LENGUAJE VISUAL DE "CÓMO TRABAJAMOS" ===== */
+.service-track .service-card{
+  position:relative;
+  background:#fff;
+  border:1px solid #dfe2e3;
+  border-radius:0;
+  overflow:hidden;
+  box-shadow:none;
+}
+.service-track .service-card.active{
+  display:block;
+}
+.service-track .service-image{
+  height:330px;
+  background:#eef0f1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.service-track .service-image>img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 50%;
+  display:block;
+}
+.service-track .service-card-body{
+  position:relative;
+  padding:32px 28px 28px;
+  min-height:180px;
+  background:#fff;
+}
+/* Numeración tipo "Cómo trabajamos": círculo amarillo sobre la imagen */
+.service-track .service-card-body>b{
+  position:absolute;
+  left:22px;
+  right:auto;
+  top:-22px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--orange);
+  color:#fff;
+  border:3px solid #fff;
+  box-shadow:0 5px 14px rgba(0,0,0,.14);
+  font:700 17px/1 "Barlow Condensed";
+  z-index:5;
+}
+.service-track .service-tag{
+  margin:0 0 7px;
+  color:var(--orange);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.15em;
+}
+.service-track .service-card-body h3{
+  margin:0 0 11px;
+  color:#1c2022;
+  font:600 28px/1.05 "Barlow Condensed";
+  text-transform:uppercase;
+}
+.service-track .service-card-body p{
+  margin:0;
+  color:#697177;
+  font-size:13px;
+  line-height:1.65;
+}
+.service-track .service-card:hover{
+  transform:none;
+  box-shadow:0 18px 38px rgba(20,25,30,.10);
+  border-color:#cbd0d2;
+}
+
+/* ===== CENTRADO Y VISIBILIDAD DE TODAS LAS FOTOGRAFÍAS ===== */
+.service-image>img,
+.process-image>img,
+.sustain-image>img,
+.project-slider .card>img,
+.completed-projects .card>img{
+  object-position:50% 50%;
+}
+.service-image>img,
+.process-image>img,
+.sustain-image>img{
+  object-fit:cover;
+}
+/* Evita que la animación desplace el contenido principal fuera del encuadre */
+.service-card:hover .service-image>img,
+.process-card:hover .process-image>img,
+.sustain-item:hover .sustain-image>img{
+  transform:scale(1.018);
+}
+.process-card.visible .process-image>img,
+.sustain-item.visible .sustain-image>img{
+  animation:none;
+}
+/* En pantallas pequeñas, conservar proporciones cómodas y centradas */
+@media(max-width:760px){
+  .service-track .service-image{height:260px}
+  .service-track .service-card-body{padding:30px 20px 24px;min-height:0}
+  .service-track .service-card-body h3{font-size:25px}
+  .service-track .service-card-body p{font-size:12px}
+  .process-image{height:235px}
+  .sustain-image{height:240px}
+}
+
+/* ===== V5 — TAMAÑO UNIFICADO DE IMÁGENES =====
+   Todas las fotografías de tarjetas usan la misma proporción visual del ejemplo:
+   aproximadamente 1.90:1, con encuadre centrado y contenido visible.
+*/
+.service-track .service-image,
+.process-grid--images .process-image,
+.sustain-grid .sustain-image,
+.project-slider .card > img,
+.completed-projects .card > img {
+  aspect-ratio: 1.90 / 1;
+  height: auto !important;
+  min-height: 0;
+  overflow: hidden;
+  background: #eef0f1;
+}
+
+.service-track .service-image > img,
+.process-grid--images .process-image > img,
+.sustain-grid .sustain-image > img,
+.project-slider .card > img,
+.completed-projects .card > img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+}
+
+/* Evita que el zoom de hover corte demasiado las fotografías. */
+.service-track .service-card:hover .service-image > img,
+.process-grid--images .process-card:hover .process-image > img,
+.sustain-grid .sustain-item:hover .sustain-image > img,
+.project-slider .card:hover > img,
+.completed-projects .card:hover > img {
+  transform: scale(1.012);
+}
+
+/* En pantallas pequeñas se conserva exactamente la misma proporción. */
+@media (max-width: 760px) {
+  .service-track .service-image,
+  .process-grid--images .process-image,
+  .sustain-grid .sustain-image,
+  .project-slider .card > img,
+  .completed-projects .card > img {
+    aspect-ratio: 1.90 / 1;
+    height: auto !important;
+  }
+}
+
+/* CLIENTES */
+.clients{background:#fff;padding-top:100px;padding-bottom:100px}
+.clients-head{margin-bottom:42px}
+.clients-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;align-items:stretch}
+.client-card{background:#fff;border:1px solid #e1e4e6;min-height:190px;padding:18px 16px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.client-card:hover{transform:translateY(-5px);box-shadow:0 16px 30px rgba(0,0,0,.08);border-color:#cfd4d7}
+.client-card img{width:100%;height:112px;object-fit:contain;display:block;image-rendering:auto}
+.client-card span{font:700 12px/1.2 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.09em;color:#59636a;text-align:center}
+@media(max-width:1000px){.clients-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.clients{padding-top:75px;padding-bottom:75px}.clients-grid{grid-template-columns:1fr 1fr;gap:12px}.client-card{min-height:160px}.client-card img{height:92px}.client-card span{font-size:10px}}
+@media(max-width:480px){.clients-grid{grid-template-columns:1fr}.client-card{min-height:150px}}
