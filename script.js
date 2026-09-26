@@ -43,7 +43,17 @@ if('IntersectionObserver' in window){
 
 // Formulario de cotización a WhatsApp.
 document.querySelector('#quote-form')?.addEventListener('submit',(event)=>{
- event.preventDefault();const data=new FormData(event.currentTarget);
- const message=['Hola IBR Estructuras S.A.C., quiero cotizar un proyecto.','',`Nombre / empresa: ${data.get('name')}`,`DNI: ${data.get('dni')}`,`Correo: ${data.get('email')}`,`Celular: ${data.get('phone')}`,'',`Mensaje: ${data.get('message')}`].join('\n');
+ event.preventDefault();
+ const data=new FormData(event.currentTarget);
+ const message=[
+  'Hola IBR Estructuras S.A.C., quiero solicitar una cotización.',
+  '',
+  `Nombre / empresa: ${data.get('name')}`,
+  `Celular / WhatsApp: ${data.get('phone')}`,
+  `Correo: ${data.get('email')}`,
+  `Tipo de proyecto: ${data.get('project')}`,
+  '',
+  `Descripción: ${data.get('message')}`
+ ].join('\n');
  window.open(`https://wa.me/51916693425?text=${encodeURIComponent(message)}`,'_blank','noopener,noreferrer');
 });
